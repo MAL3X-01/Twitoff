@@ -3,7 +3,7 @@ from decouple import config
 from flask import Flask, render_template, request
 from .models import DB, User
 from .twitter import add_or_update_user
-from.predict import predict_user
+from .predict import predict_user
 
 
 def create_app():

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a55098e6426e2952b330a55e6e4241d4c81f9264ea6b5be057dc7e30c5eeeb66"
+            "sha256": "2be5d1c527d590f53a5347c477a57eee737d4ae5fa2d2702192c66a97d391635"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -59,6 +59,12 @@
             ],
             "index": "pypi",
             "version": "==2.4.0"
+        },
+        "get": {
+            "hashes": [
+                "sha256:688268840f923255932154a52bdd40ffac467de4126835c43846e9e6f112844c"
+            ],
+            "version": "==2019.4.13"
         },
         "gunicorn": {
             "hashes": [
@@ -188,6 +194,12 @@
             ],
             "version": "==6.1.0"
         },
+        "post": {
+            "hashes": [
+                "sha256:8fd57fb16f2c90ef4a76b04b8701c4db8ded170e53fac9514b5ea0272da5d36f"
+            ],
+            "version": "==2019.4.13"
+        },
         "psycopg2": {
             "hashes": [
                 "sha256:128d0fa910ada0157bba1cb74a9c5f92bb8a1dca77cf91a31eb274d1f889e001",
@@ -204,6 +216,13 @@
             ],
             "index": "pypi",
             "version": "==2.8.3"
+        },
+        "public": {
+            "hashes": [
+                "sha256:e1436a8a99693a9849dfe40b9158f3837b7c309c163b2d3f5b8e9fce23876db1",
+                "sha256:feb0c74e30b782a439d09b67fae239cb79491f20f1fbd12e4e88b6ce92ab910c"
+            ],
+            "version": "==2019.4.13"
         },
         "pysocks": {
             "hashes": [
@@ -227,6 +246,19 @@
             ],
             "index": "pypi",
             "version": "==0.10.3"
+        },
+        "query-string": {
+            "hashes": [
+                "sha256:bb24e4f58849ef6f8219b2446c2bed076d86c97720ae9c3ae918625807394ca8"
+            ],
+            "version": "==2019.4.13"
+        },
+        "request": {
+            "hashes": [
+                "sha256:6297b53c29a4928f7735034df2ab60aa1c7c044df989f605a81b7dc2d3713732"
+            ],
+            "index": "pypi",
+            "version": "==2019.4.13"
         },
         "requests": {
             "hashes": [
