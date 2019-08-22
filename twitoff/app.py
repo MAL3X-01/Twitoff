@@ -3,6 +3,7 @@ from decouple import config
 from flask import Flask, render_template, request
 from .models import DB, User
 from .twitter import add_or_update_user
+from.predict import predict_user
 
 
 def create_app():
@@ -32,6 +33,14 @@ def create_app():
             tweets = []
         return render_template('user.html', title=name, tweets=tweets,
                                message=message)
+    @app.route('/compare', methods=['POST'])
+    def compare():
+    	user1, user2 = request.values['user1'], request.values['user2']
+    	if user1 == user2:
+    		return 'Cannot compare a user to themselves!'
+    	else:
+    		prediction = predict_user(user1, user2, request.values['tweet_text'])
+    		return user1 if prediction else user2
 
     @app.route('/reset')
     def reset():
