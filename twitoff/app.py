@@ -33,14 +33,16 @@ def create_app():
             tweets = []
         return render_template('user.html', title=name, tweets=tweets,
                                message=message)
+
     @app.route('/compare', methods=['POST'])
     def compare():
-    	user1, user2 = request.values['user1'], request.values['user2']
-    	if user1 == user2:
-    		return 'Cannot compare a user to themselves!'
-    	else:
-    		prediction = predict_user(user1, user2, request.values['tweet_text'])
-    		return user1 if prediction else user2
+        user1, user2 = request.values['user1'], request.values['user2']
+        if user1 == user2:
+            return 'Cannot compare a user to themselves!'
+        else:
+            prediction = predict_user(
+                user1, user2, request.values['tweet_text'])
+            return user1 if prediction else user2
 
     @app.route('/reset')
     def reset():
@@ -48,4 +50,4 @@ def create_app():
         DB.create_all()
         return render_template('base.html', title='DB Reset!', users=[])
 
-    return app 
+    return app
